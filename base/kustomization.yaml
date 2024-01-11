@@ -21,9 +21,6 @@ resources:
   - base/wazuh-ns.yaml
   - base/storage-class.yaml
 
-  - cert/wazuh-ns.yaml
-  - base/storage-class.yaml
-
   - wazuh-dashboard/wazuh-dashboard-deployment.yaml
   - wazuh-dashboard/wazuh-dashboard-configmap.yaml
   - wazuh-dashboard/wazuh-dashboard-service.yaml
