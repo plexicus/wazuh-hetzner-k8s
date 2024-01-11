@@ -5,7 +5,7 @@ metadata:
   namespace: default
 spec:
   rules:
-  - host: mdr.puffinsecurity.com
+  - host: mdr.plexicus.com
     http:
       paths:
       - path: /
@@ -17,5 +17,5 @@ spec:
               number: 5601
   tls:
   - hosts:
-    - mdr.puffinsecurity.com
-    secretName: mdr-puffinsecurity-tls
+    - mdr.plexicus.com
+    secretName: wazuh-dashboard-http-cert-secret
