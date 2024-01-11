@@ -5,7 +5,7 @@ metadata:
   namespace: wazuh
 spec:
   secretName: wazuh-dashboard-http-cert-secret
-  duration: 365d
+  duration: 8760h
   privateKey:
     algorithm: RSA
     size: 2048

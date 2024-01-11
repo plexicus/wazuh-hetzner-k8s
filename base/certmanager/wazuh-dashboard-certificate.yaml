@@ -5,7 +5,7 @@ metadata:
   namespace: wazuh
 spec:
   secretName: wazuh-indexer-dashboard-cert-secret
-  duration: 3650d
+  duration: 87600h
   commonName: "dashboard"
   privateKey:
     algorithm: RSA

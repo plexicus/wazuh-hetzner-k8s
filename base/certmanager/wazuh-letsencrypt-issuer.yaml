@@ -7,7 +7,7 @@ metadata:
 spec:
   acme:
     # You must replace this email address with your own.
-    email: info@puffinsecurity.com
+    email: info@plexicus.com
     server: https://acme-v02.api.letsencrypt.org/directory
     privateKeySecretRef:
       # Secret resource that will be used to store the account's private key.
