@@ -20,3 +20,43 @@ configMapGenerator:
 resources:
   - base/wazuh-ns.yaml
   - base/storage-class.yaml
+
+  - cert/wazuh-ns.yaml
+  - base/storage-class.yaml
+
+  - wazuh-dashboard/wazuh-dashboard-deployment.yaml
+  - wazuh-dashboard/wazuh-dashboard-configmap.yaml
+  - wazuh-dashboard/wazuh-dashboard-service.yaml
+
+  - wazuh-indexer/wazuh-indexer-statefulset.yaml
+  - wazuh-indexer/wazuh-indexer-service.yaml
+  - wazuh-indexer/wazuh-indexer-api-service.yaml
+
+  - wazuh-managers/worker/wazuh-manager-worker-service.yaml
+  - wazuh-managers/worker/wazuh-manager-worker-statefulset.yaml
+
+  - wazuh-managers/master/wazuh-manager-master-service.yaml
+  - wazuh-managers/master/wazuh-manager-master-statefulset.yaml
+
+  - wazuh-managers/wazuh-manager-configmap.yaml
+  - wazuh-managers/wazuh-manager-cluster-service.yaml
+
+  - certmanager/wazuh-letsencrypt-issuer.yaml
+  - certmanager/wazuh-dashboard-ssl-certificate.yaml
+  - certmanager/wazuh-dashboard-certificate.yaml
+  - certmanager/wazuh-admin-cert.yaml
+  - certmanager/wazuh-indexer-filebeat-certificate.yaml
+  - certmanager/wazuh-selfsigned-issuer.yaml
+  - certmanager/wazuh-indexer-rootca-certificate.yaml
+  - certmanager/wazuh-indexer-node-certificate.yaml
+  - certmanager/wazuh-rootca-issuer.yaml
+
+  - traefik/wazuh-dashboard-ingress.yaml
+  - traefik/wazuh-registration-ingress.yaml
+  - traefik/wazuh-api-ingress.yaml
+
+  - secrets/wazuh-dashboard-cred-secret.yaml
+  - secrets/wazuh-cluster-key-secret.yaml
+  - secrets/wazuh-indexer-cred-secret.yaml
+  - secrets/wazuh-authd-pass-secret.yaml
+  - secrets/wazuh-api-cred-secret.yaml
