@@ -21,9 +21,6 @@ spec:
         - name: config
           configMap:
             name: dashboard-conf ## Configmap from config
-        - name: config
-          configMap:
-            name: dashboard-conf ## Configmap from config
 
         - name: wazuh-dashboard-http-cert-secret
           secret:
