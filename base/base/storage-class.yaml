@@ -11,4 +11,4 @@ apiVersion: storage.k8s.io/v1
 kind: StorageClass
 metadata:
   name: wazuh-storage
-  provisioner: cni.storage.hetzner # Hetzner
+  provisioner: csi.hetzner.cloud # Hetzner
