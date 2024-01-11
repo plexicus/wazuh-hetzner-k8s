@@ -1,0 +1,15 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: wazuh-indexer-node-cert
+  namespace: wazuh
+spec:
+  secretName: wazuh-indexer-node-cert-secret
+  duration: 3650d
+  commonName: "*.wazuh-indexer"
+  privateKey:
+    algorithm: RSA
+    size: 2048
+  issuerRef:
+    name: wazuh-ca-issuer
+    kind: Issuer

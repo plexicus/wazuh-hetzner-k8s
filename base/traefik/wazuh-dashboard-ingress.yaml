@@ -1,0 +1,21 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: wazuh-dashboard-ingress
+  namespace: default
+spec:
+  rules:
+  - host: mdr.puffinsecurity.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: wazuh-dashboard-service
+            port:
+              number: 5601
+  tls:
+  - hosts:
+    - mdr.puffinsecurity.com
+    secretName: mdr-puffinsecurity-tls

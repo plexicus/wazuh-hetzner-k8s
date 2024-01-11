@@ -1,0 +1,4 @@
+---
+namespace: wazuh-production
+resources:
+- ../../base
