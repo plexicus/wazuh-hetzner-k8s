@@ -22,7 +22,6 @@ resources:
   - base/storage-class.yaml
 
   - wazuh-dashboard/wazuh-dashboard-deployment.yaml
-  - wazuh-dashboard/wazuh-dashboard-configmap.yaml
   - wazuh-dashboard/wazuh-dashboard-service.yaml
 
   - wazuh-indexer/wazuh-indexer-statefulset.yaml
@@ -35,7 +34,6 @@ resources:
   - wazuh-managers/master/wazuh-manager-master-service.yaml
   - wazuh-managers/master/wazuh-manager-master-statefulset.yaml
 
-  - wazuh-managers/wazuh-manager-configmap.yaml
   - wazuh-managers/wazuh-manager-cluster-service.yaml
 
   - certmanager/wazuh-letsencrypt-issuer.yaml
@@ -49,8 +47,8 @@ resources:
   - certmanager/wazuh-rootca-issuer.yaml
 
   - traefik/wazuh-dashboard-ingress.yaml
-  - traefik/wazuh-registration-ingress.yaml
-  - traefik/wazuh-api-ingress.yaml
+  #- traefik/wazuh-registration-ingress.yaml
+  #- traefik/wazuh-api-ingress.yaml
 
   - secrets/wazuh-dashboard-cred-secret.yaml
   - secrets/wazuh-cluster-key-secret.yaml
