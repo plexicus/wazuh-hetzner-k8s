@@ -29,9 +29,9 @@ spec:
           secret:
             secretName: wazuh-indexer-node-certificate
 
-        - name: indexer-conf
+        - name: wazuh-indexer-conf
           configMap:
-            name: indexer-conf
+            name: wazuh-indexer-conf
       initContainers:
         - name: volume-mount-hack
           image: busybox
@@ -120,11 +120,11 @@ spec:
               subPath: admin-key.pem
               readOnly: true
 
-            - name: indexer-conf
+            - name: wazuh-indexer-conf
               mountPath: /usr/share/wazuh-indexer/opensearch.yml
               subPath: opensearch.yml
               readOnly: true
-            - name: indexer-conf
+            - name: wazuh-indexer-conf
               mountPath: /usr/share/wazuh-indexer/opensearch-security/internal_users.yml
               subPath: internal_users.yml
               readOnly: true
