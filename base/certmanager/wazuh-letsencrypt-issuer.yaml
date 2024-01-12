@@ -3,7 +3,7 @@ apiVersion: cert-manager.io/v1
 kind: Issuer
 metadata:
   name: letsencrypt-prod
-  namespace: your-namespace  # Replace with the namespace you want to use
+  namespace: wazuh
 spec:
   acme:
     # You must replace this email address with your own.
