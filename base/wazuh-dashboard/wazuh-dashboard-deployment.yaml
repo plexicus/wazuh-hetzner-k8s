@@ -35,7 +35,7 @@ spec:
             secretName: wazuh-indexer-root-ca-secret ## Manage with cert-manager
       containers:
         - name: wazuh-dashboard
-          image: 'wazuh/wazuh-dashboard:4.9.0'
+          image: 'wazuh/wazuh-dashboard:4.7.2'
           ports:
             - containerPort: 5601
               name: dashboard
