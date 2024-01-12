@@ -12,3 +12,4 @@ kind: StorageClass
 metadata:
   name: wazuh-storage
 provisioner: csi.hetzner.cloud # Hetzner
+volumeBindingMode: WaitForFirstConsumer # Do not create until pod has been created in a region
