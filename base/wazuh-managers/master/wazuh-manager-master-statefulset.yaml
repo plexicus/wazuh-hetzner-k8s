@@ -21,15 +21,15 @@ spec:
       volumes:
         - name: config
           configMap:
-            name: wazuh-conf
+            name: wazuh-managers-conf
 
         - name: rootca-cert
           secret:
-            secretName: wazuh-indexer-rootca-certificate
+            secretName: wazuh-indexer-root-ca-secret
 
         - name: filebeat-certs
           secret:
-            secretName: wazuh-indexer-filebeat-certificate
+            secretName: wazuh-indexer-filebeat-cert-secret
 
         - name: wazuh-authd-pass
           secret:

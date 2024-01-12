@@ -17,17 +17,17 @@ spec:
     spec:
       # Set the wazuh-indexer volume permissions so the wazuh-indexer user can use it
       volumes:
-        - name: wazuh-admin-cert
+        - name: wazuh-indexer-admin-cert-secret
           secret:
-            secretName: wazuh-admin-cert
+            secretName: wazuh-indexer-admin-cert-secret
           
-        - name: wazuh-indexer-rootca-certificate
+        - name: wazuh-indexer-root-ca-secret
           secret:
-            secretName: wazuh-indexer-rootca-certificate
+            secretName: wazuh-indexer-root-ca-secret
 
-        - name: wazuh-indexer-node-certificate
+        - name: wazuh-indexer-node-cert-secret
           secret:
-            secretName: wazuh-indexer-node-certificate
+            secretName: wazuh-indexer-node-cert-secret
 
         - name: wazuh-indexer-conf
           configMap:
@@ -95,27 +95,27 @@ spec:
             - name: wazuh-indexer
               mountPath: /var/lib/wazuh-indexer
 
-            - name: wazuh-indexer-node-certificate
+            - name: wazuh-indexer-node-cert-secret
               mountPath: /usr/share/wazuh-indexer/certs/node-key.pem
               subPath: node-key.pem
               readOnly: true
 
-            - name: wazuh-indexer-node-certificate
+            - name: wazuh-indexer-node-cert-secret
               mountPath: /usr/share/wazuh-indexer/certs/node.pem
               subPath: node.pem
               readOnly: true
 
-            - name: wazuh-indexer-rootca-certificate
+            - name: wazuh-indexer-root-ca-secret
               mountPath: /usr/share/wazuh-indexer/certs/root-ca.pem
               subPath: root-ca.pem
               readOnly: true
 
-            - name: wazuh-admin-cert
+            - name: wazuh-indexer-admin-cert-secret
               mountPath: /usr/share/wazuh-indexer/certs/admin.pem
               subPath: admin.pem
               readOnly: true
 
-            - name: wazuh-admin-cert
+            - name: wazuh-indexer-admin-cert-secret
               mountPath: /usr/share/wazuh-indexer/certs/admin-key.pem
               subPath: admin-key.pem
               readOnly: true
