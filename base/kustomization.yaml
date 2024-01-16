@@ -48,14 +48,15 @@ resources:
   - base/storage-class.yaml
 
   - certmanager/wazuh-letsencrypt-issuer.yaml
-  - certmanager/wazuh-selfsigned-issuer.yaml
-  - certmanager/wazuh-indexer-rootca-certificate.yaml
-  - certmanager/wazuh-rootca-issuer.yaml
   - certmanager/wazuh-dashboard-ssl-certificate.yaml
-  - certmanager/wazuh-dashboard-certificate.yaml
-  - certmanager/wazuh-admin-cert.yaml
-  - certmanager/wazuh-indexer-filebeat-certificate.yaml
-  - certmanager/wazuh-indexer-node-certificate.yaml
+
+  #- certmanager/wazuh-selfsigned-issuer.yaml
+  #- certmanager/wazuh-indexer-rootca-certificate.yaml
+  #- certmanager/wazuh-rootca-issuer.yaml
+  #- certmanager/wazuh-dashboard-certificate.yaml
+  #- certmanager/wazuh-admin-cert.yaml
+  #- certmanager/wazuh-indexer-filebeat-certificate.yaml
+  #- certmanager/wazuh-indexer-node-certificate.yaml
 
   - secrets/wazuh-dashboard-cred-secret.yaml
   - secrets/wazuh-cluster-key-secret.yaml
