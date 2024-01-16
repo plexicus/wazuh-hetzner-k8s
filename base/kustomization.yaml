@@ -25,11 +25,6 @@ secretGenerator:
       - internal_certs/node-key.pem
       - internal_certs/node.pem
 
-  - name: wazuh-indexer-node-cert-secret
-    files:
-      - internal_certs/node-key.pem
-      - internal_certs/node.pem
-
 configMapGenerator:
   - name: wazuh-indexer-conf
     files:
