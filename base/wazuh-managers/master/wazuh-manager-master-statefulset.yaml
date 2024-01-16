@@ -58,11 +58,11 @@ spec:
               subPath: root-ca.pem
             - name: filebeat-certs
               mountPath: /etc/ssl/filebeat.pem
-              subPath: tls.crt
+              subPath: filebeat.pem
               readOnly: true
             - name: filebeat-certs
               mountPath: /etc/ssl/filebeat.key
-              subPath: tls.key
+              subPath: filebeat-key.pem
               readOnly: true
             - name: wazuh-authd-pass
               mountPath: /wazuh-config-mount/etc/authd.pass

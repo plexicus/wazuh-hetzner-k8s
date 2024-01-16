@@ -4,6 +4,32 @@ kind: Kustomization
 # Adds wazuh namespace to all resources.
 namespace: wazuh
 
+secretGenerator:
+  - name: wazuh-indexer-root-ca-secret
+    files:
+      - internal_certs/root-ca.pem
+      - internal_certs/root-ca-key.pem
+
+  - name: wazuh-indexer-filebeat-cert-secret
+    files:
+      - internal_certs/filebeat.pem
+      - internal_certs/filebeat-key.pem
+
+  - name: wazuh-indexer-admin-cert-secret
+    files:
+      - internal_certs/admin.pem
+      - internal_certs/admin-key.pem
+
+  - name: wazuh-indexer-node-cert-secret
+    files:
+      - internal_certs/node-key.pem
+      - internal_certs/node.pem
+
+  - name: wazuh-indexer-node-cert-secret
+    files:
+      - internal_certs/node-key.pem
+      - internal_certs/node.pem
+
 configMapGenerator:
   - name: wazuh-indexer-conf
     files:
