@@ -5,7 +5,7 @@ metadata:
   namespace: default
 spec:
   rules:
-  - host: mdr.plexicus.com
+  - host: dashboard.mdr.plexicus.com
     http:
       paths:
       - path: /
@@ -14,8 +14,8 @@ spec:
           service:
             name: wazuh-dashboard-service
             port:
-              number: 5601
+              number: 443
   tls:
   - hosts:
-    - mdr.plexicus.com
+    - dashboard.mdr.plexicus.com
     secretName: wazuh-dashboard-http-cert-secret
