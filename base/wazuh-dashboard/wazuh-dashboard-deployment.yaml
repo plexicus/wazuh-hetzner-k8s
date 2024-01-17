@@ -66,7 +66,7 @@ spec:
 
           env:
             - name: INDEXER_URL
-              value: 'https://wazuh-indexer-api-service.wazuh:9200' 
+              value: 'https://wazuh-indexer-api-service.wazuh.svc.cluster.local:9200' 
 
             - name: INDEXER_USERNAME
               valueFrom:
@@ -97,7 +97,7 @@ spec:
               value: /usr/share/wazuh-dashboard/certs/key.pem
 
             - name: WAZUH_API_URL
-              value: https://wazuh.wazuh
+              value: https://wazuh.wazuh.svc.cluster.local
             - name: API_USERNAME
               valueFrom:
                 secretKeyRef:
