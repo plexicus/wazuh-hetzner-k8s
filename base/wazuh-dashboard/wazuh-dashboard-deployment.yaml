@@ -30,7 +30,7 @@ spec:
               path: cert.pem
             - key: tls.key
               path: key.pem
-        - name: wazuh-indexer-root-ca-secret
+        - name: rootca-cert
           secret:
             secretName: wazuh-indexer-root-ca-secret ## Manage with cert-manager
       containers:
@@ -52,7 +52,8 @@ spec:
             - name: wazuh-dashboard-http-cert-secret
               mountPath: /usr/share/wazuh-dashboard/certs
               readOnly: true
-            - name: wazuh-indexer-root-ca-secret
+
+            - name: rootca-cert
               mountPath: /usr/share/wazuh-dashboard/certs/root-ca.pem
               subPath: root-ca.pem
               readOnly: true
