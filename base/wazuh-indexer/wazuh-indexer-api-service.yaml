@@ -6,7 +6,7 @@ metadata:
   labels:
     app: wazuh-indexer
 spec:
-  type: LoadBalancer
+  clusterIP: None
   selector:
     app: wazuh-indexer
   ports:
