@@ -50,8 +50,14 @@ spec:
               readOnly: false
 
             - name: wazuh-dashboard-http-cert-secret
-              mountPath: /usr/share/wazuh-dashboard/certs
+              mountPath: /usr/share/wazuh-dashboard/certs/cert.pem
               readOnly: true
+              subPath: cert.pem
+
+            - name: wazuh-dashboard-http-cert-secret
+              mountPath: /usr/share/wazuh-dashboard/certs/key.pem
+              readOnly: true
+              subPath: key.pem
 
             - name: rootca-cert
               mountPath: /usr/share/wazuh-dashboard/certs/root-ca.pem
