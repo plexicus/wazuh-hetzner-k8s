@@ -28,7 +28,7 @@ spec:
       volumes:
         - name: config
           configMap:
-            name: wazuh-workers-conf
+            name: wazuh-managers-conf
 
         - name: rootca-cert
           secret:
