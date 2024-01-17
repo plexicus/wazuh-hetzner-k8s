@@ -12,5 +12,5 @@ spec:
   dnsNames:
     - "dashboard.mdr.plexicus.com"  # Replace with your actual domain
   issuerRef:
-    name: letsencrypt-prod
+    name: letsencrypt-dev
     kind: Issuer
