@@ -12,4 +12,3 @@ spec:
     - name: cluster
       port: 1516
       targetPort: 1516
-  clusterIP: None
