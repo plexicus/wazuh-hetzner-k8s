@@ -43,6 +43,7 @@ resources:
   - base/storage-class.yaml
 
   - certmanager/wazuh-letsencrypt-issuer.yaml
+  - certmanager/wazuh-letsencrypt-dev-issuer.yaml
   - certmanager/wazuh-dashboard-ssl-certificate.yaml
 
   #- certmanager/wazuh-selfsigned-issuer.yaml
